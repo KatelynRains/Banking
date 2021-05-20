@@ -14,7 +14,10 @@ namespace Banking
             Console.WriteLine($"Balance is {acct1.Balance}");
 
             var acct2 = new Account();
-            acct1.Transfer(100, acct2);
-        }
+
+            acct1.Transfer(1000, acct2);
+            Console.WriteLine($"Balance is {acct1.Balance}");
+            Console.WriteLine($"Balance is {acct2.Balance}");
+         }
     }
 }

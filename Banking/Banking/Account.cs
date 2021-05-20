@@ -14,8 +14,7 @@ namespace Banking
         public bool Deposit(decimal amount)
         {
             if (amount <= 0)
-            {
-                Console.WriteLine($"Amount must be GT zero ");
+            {   Console.WriteLine($"Amount must be GT zero ");
                 return false;
             }
             Balance = Balance + amount;
@@ -24,9 +23,7 @@ namespace Banking
         public bool Withdrawal(decimal amount)
         {
             if (amount <= 0)
-            {
-                Console.WriteLine($"AMount must be GT zero ");
-
+            {   Console.WriteLine($"AMount must be GT zero ");
                 return false;
             }
             if(amount > Balance)
@@ -37,7 +34,14 @@ namespace Banking
             return true;      
         }
         public bool Transfer(decimal amount, Account toAccount)
-        { 
+        {
+            var success = this.Withdrawal(amount);
+            if (success == true)
+            {
+                toAccount.Deposit(amount);
+                return true;
+            }
+            return false; 
         }
     }
 }
