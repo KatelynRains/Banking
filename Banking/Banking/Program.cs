@@ -1,0 +1,20 @@
+﻿using System;
+
+namespace Banking
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var acct1 = new Account();
+            acct1.Deposit(500);
+            acct1.Withdrawal(200);
+            acct1.Withdrawal(600);
+            acct1.Deposit(-400);
+            Console.WriteLine($"Balance is {acct1.Balance}");
+
+            var acct2 = new Account();
+            acct1.Transfer(100, acct2);
+        }
+    }
+}
