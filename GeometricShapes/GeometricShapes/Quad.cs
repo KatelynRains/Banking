@@ -18,6 +18,8 @@ namespace GeometricShapes
             return Side1 + Side2 + Side3 + Side4;
         }
 
+        public virtual string WhatAmI()
+        { return "Quad"; }
         public Quad() { }
 
         //if you wanted to do a constructor

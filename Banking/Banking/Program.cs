@@ -6,6 +6,11 @@ namespace Banking
     {
         static void Main(string[] args)
         {
+            var sav1 = new Savings();
+            sav1.Deposit(1000);
+            sav1.PayInterest(3);
+
+
             var acct1 = new Account();
             acct1.Deposit(500);
             acct1.Withdrawal(200);

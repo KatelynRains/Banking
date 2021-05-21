@@ -9,7 +9,7 @@ namespace GeometricShapes
 
     class rect2
     {
-        public Quad quad { get; set; }
+        public Quad quad { get; set; }  //uses format of the quad class
         public int Perimeter()
         {
             return quad.Perimeter();

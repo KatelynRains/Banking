@@ -9,10 +9,24 @@ namespace GeometricShapes
              
 
 
-        { var rect3 = new Rect3(4,7);
-            Console.WriteLine($"Perimeter is {rect3.Perimeter()}");
-            var sqr3 = new Sqr3(5);
-            Console.WriteLine($"Perimeter is {sqr3.Perimeter()} and Area is {sqr3.Area()}");
+        { 
+           
+            var sqr35 = new Sqr3(5);
+            var sqr37 = new Sqr3(5);
+            var rect31 = new Rect3(4, 7);
+            var rect32 = new Rect3(4, 7);
+            var rect33 = new Rect3(4, 7);
+            var quad10 = new Quad(1, 2, 3, 4);
+
+
+            var shapes = new Quad[] { sqr35, sqr37, rect31, rect32, rect33, quad10 };
+
+            foreach (var shape in shapes) {
+
+                Console.WriteLine($"{shape.WhatAmI()} perimeter is {shape.Perimeter()}");
+            
+            }
+
 
 
             var x = 0;
