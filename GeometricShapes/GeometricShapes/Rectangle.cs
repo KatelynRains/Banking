@@ -14,12 +14,22 @@ namespace GeometricShapes
             
             public int Recp()  //for perimeter of rectangle
             {
-            return Side1*2  + Side2*2;
-            }
+            return 2*(Side1 + Side2);
+            }    
+
             public int Reca()  //for area of rectangle
             {
             return Side1 * Side2;
             }
 
-    }
+
+        // using constructors
+             public Rectangle(int s1, int s2)
+             {
+            Side1 = s1;
+            Side2 = s2;
+             }
+
+
+    }       
 }

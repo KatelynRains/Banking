@@ -12,12 +12,23 @@ namespace GeometricShapes
         public int Side3 { get; set; }
         public int Side4 { get; set; }
 
-        /// establish methods
-        public int QP()
+        /// establish methods - without using constructors
+        public int Perimeter()
         {
             return Side1 + Side2 + Side3 + Side4;
         }
 
+        public Quad() { }
+
+        //if you wanted to do a constructor
+        public Quad(int s1, int s2, int s3, int s4)
+        {
+            Side1 = s1;
+            Side2 = s2;
+            Side3 = s3;
+            Side4 = s4;
+
+        }
        
     }
 }
