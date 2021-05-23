@@ -11,7 +11,7 @@ namespace Banking
         public string RoutingNumber { get; set; }
         public string Description { get; set; }
 
-        public bool Deposit(decimal amount)
+        public virtual bool Deposit(decimal amount)
         {
             if (amount <= 0)
             {   Console.WriteLine($"Amount must be GT zero ");
@@ -20,7 +20,7 @@ namespace Banking
             Balance = Balance + amount;
             return true;
         }
-        public bool Withdrawal(decimal amount)
+        public virtual bool Withdrawal(decimal amount)
         {
             if (amount <= 0)
             {   Console.WriteLine($"AMount must be GT zero ");
