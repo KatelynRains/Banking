@@ -23,6 +23,7 @@ namespace GenericCollectionsLession
               total = total + i;
             }
             Console.WriteLine($"Total is {total}");
+            ints.ToList().foreach(Console.WriteLine);
             
         }        
     }
