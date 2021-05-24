@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banking.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -14,8 +15,8 @@ namespace Banking
         public virtual bool Deposit(decimal amount)
         {
             if (amount <= 0)
-            {   Console.WriteLine($"Amount must be GT zero ");
-                return false;
+            {
+                throw new  InvalidParameterException(amount);  //need to add Using since namespace is different
             }
             Balance = Balance + amount;
             return true;
@@ -23,12 +24,12 @@ namespace Banking
         public virtual bool Withdrawal(decimal amount)
         {
             if (amount <= 0)
-            {   Console.WriteLine($"Amount must be GT zero ");
-                return false;
+            {
+                throw new InvalidParameterException(amount);  //need to add Using since namespace is different
             }
             if(amount > Balance)
-            {   Console.WriteLine($"Insufficient funds ");
-                return false;
+            {
+                throw new InsufficientFundsException(amount, Balance);
             }
             Balance = Balance - amount;
             return true;      

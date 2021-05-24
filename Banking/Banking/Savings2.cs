@@ -4,8 +4,19 @@ using System.Text;
 
 namespace Banking
 {
-    class Savings2  //creating Savings class using composition - probably easier to inherit class
-    {
+    class Savings2 : IBanking
+    {  ///needed for interface to return balance and account number
+        string IBanking.GetAccountNumber()
+        {
+            return account.AccountNumber;
+        }
+
+        decimal IBanking.GetBalance()
+        {
+            return account.Balance;
+        }
+    //creating Savings class using composition - probably easier to inherit class
+    
         private Account account = new Account();
         public decimal InterestRate { get; private set; } = 0.12m; //defaults to 1% - this is the annual rate
 

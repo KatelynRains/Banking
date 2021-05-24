@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Banking.Exceptions;
+using System;
 
 namespace Banking
 {
@@ -6,6 +7,32 @@ namespace Banking
     {
         static void Main(string[] args)
         {
+            var act100 = new Account();
+            act100.Deposit(-100);
+            try
+            {
+                act100.Withdrawal(12000);
+            }
+            catch (InsufficientFundsException ex) { }
+
+            catch (DivideByZeroException ex) { throw; }
+
+            catch (Exception ex) { }  //do this one last always since first exception that is true is thrown
+
+            var sv1 = new Savings2();
+            sv1.Deposit(2000);
+            var cd10 = new CertificateOfDeposit(5000, 60);
+            var accounts = new IBanking[] { sv1, cd10 };
+            foreach(var acct in accounts)
+            {
+                Console.WriteLine($"Account balance is {acct.GetBalance()}"); //need to add composition method for CD for this to work
+            }
+            
+            
+            
+            
+            
+            
             var sav1 = new Savings();
             sav1.Deposit(1000);
             sav1.PayInterest(3);
