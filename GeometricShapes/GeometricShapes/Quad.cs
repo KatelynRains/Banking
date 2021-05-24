@@ -20,7 +20,7 @@ namespace GeometricShapes
 
         public virtual string WhatAmI()
         { return "Quad"; }
-        public Quad() { }
+        //public Quad() { }
 
         //if you wanted to do a constructor
         public Quad(int s1, int s2, int s3, int s4)
@@ -28,7 +28,7 @@ namespace GeometricShapes
             Side1 = s1;
             Side2 = s2;
             Side3 = s3;
-            Side4 = s4;
+            Side4 = s4; 
 
         }
        

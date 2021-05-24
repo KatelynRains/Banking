@@ -6,11 +6,7 @@ namespace GeometricShapes
     {
         static void Main(string[] args)
 
-             
-
-
         { 
-           
             var sqr35 = new Sqr3(5);
             var sqr37 = new Sqr3(5);
             var rect31 = new Rect3(4, 7);
@@ -29,7 +25,7 @@ namespace GeometricShapes
 
 
 
-            var x = 0;
+            //var x = 0;
 
             //cals for quad - this is the method without constructors
             //var quad1 = new Quad();

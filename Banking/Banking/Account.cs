@@ -23,7 +23,7 @@ namespace Banking
         public virtual bool Withdrawal(decimal amount)
         {
             if (amount <= 0)
-            {   Console.WriteLine($"AMount must be GT zero ");
+            {   Console.WriteLine($"Amount must be GT zero ");
                 return false;
             }
             if(amount > Balance)
