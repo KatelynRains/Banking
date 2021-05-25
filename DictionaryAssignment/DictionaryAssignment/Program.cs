@@ -48,7 +48,12 @@ namespace DictionaryAssignment
                 dictionary[i] = dictionary[i] + 1;  //this is the second piece of data
                         
             }
+            foreach (var key in dictionary.Keys) 
+            {
+
+                Console.WriteLine($"The digit {key} occurs {dictionary[key]} times");
             
+            }
 
         }
     }
